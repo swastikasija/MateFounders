@@ -6,7 +6,7 @@ export default function FetchNews() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     (async () => {
-      //  const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=e977988aa8234d87b14ba1de8175b2a6`;
+       const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=e977988aa8234d87b14ba1de8175b2a6`;
       try {
         setLoading(true);
         const res = await fetch(url);

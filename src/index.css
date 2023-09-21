@@ -258,6 +258,7 @@ input {
 }
 
 .events-card {
+  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -272,6 +273,7 @@ input {
 }
 
 .events-card img {
+  margin-bottom: 40px;
   overflow: hidden;
   transition: all 0.3s ease-in;
 }
@@ -308,6 +310,7 @@ form {
 }
 
 .founder-container {
+  margin-block: 40px;
   text-align: center;
   color: var(--color);
   display: flex;
