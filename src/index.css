@@ -1,0 +1,372 @@
+.light-theme {
+  --btnclr: white;
+  --background: #f6f8fa;
+  --color: rgb(39, 37, 37);
+}
+
+.dark-theme {
+  --btnclr: white;
+  --background: #242424;
+  --color: rgb(255, 255, 255);
+}
+
+body {
+  background-attachment: var(--background);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  /* background-color: #242424; */
+}
+
+body {
+  background-color: var(--background);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  overflow: hidden;
+}
+
+button {
+  margin-right: 7px;
+  color: var(--btnclr);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.nav {
+  background: transparent;
+  /* height: 60px; */
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  /* -webkit-backdrop-filter: blur(55px);
+  backdrop-filter: blur(55px); */
+  top: 0;
+  z-index: 0;
+}
+
+.nav img {
+  border-radius: 10px;
+  width: 70px;
+  height: 70px;
+  margin-left: 100px;
+}
+
+.nav .right-section ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 100px;
+}
+
+li {
+  position: relative;
+  color: var(--color);
+  list-style: none;
+  margin-right: 40px;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 1.5px;
+  width: 0%;
+  left: 0;
+  background: var(--color);
+  transition: all 0.3s ease-in;
+
+}
+
+li:hover::after {
+  width: 80%;
+  background-color: #646cff;
+}
+
+.swiper {
+  margin-bottom: 30px;
+  width: 80vw;
+  height: 70vh;
+}
+
+.swiper-slide {
+  color: var(--color);
+  text-align: center;
+  font-size: 18px;
+  /* background: #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  border-radius: 10px;
+  /* display: block; */
+  width: 70vw;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.center {
+  text-align: center;
+}
+
+.sign-in {
+  color: var(--color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 250px);
+  z-index: 2;
+  flex-direction: column;
+}
+
+.signin-children {
+  color: var(--color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  background-color: transparent;
+  border: 1.6px solid var(--color);
+  border-radius: 14px;
+  /* -webkit-backdrop-filter: blur(15px); */
+  backdrop-filter: blur(100px);
+}
+
+.sign-in::backdrop {
+  background: var(--background);
+}
+
+input {
+  border: 1px solid var(--color);
+  padding-inline: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: medium;
+  margin-bottom: 40px;
+  width: 300px;
+  height: 30px;
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.card {
+
+  padding: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: transparent;
+  backdrop-filter: blur(55px);
+  -webkit-backdrop-filter: blur(55px);
+  width: 350px;
+  height: 450px;
+  margin: 2em 3em;
+  border-radius: 10px;
+  background-color: rgb(76, 74, 78);
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.flex {
+  display: flex;
+}
+
+.card img {
+  border-radius: 4px;
+  margin-top: 13px;
+  width: 300px;
+  height: 300px;
+  transition: all 0.4s ease;
+}
+
+.card img:hover {
+  scale: 1.1;
+}
+
+.events-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--color);
+  padding: 10px;
+  border-radius: 12px;
+  width: 350px;
+  height: 380px;
+  border: 1px solid var(--color);
+}
+
+.events-card img {
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+}
+
+.events-card img:hover {
+  scale: 1.1;
+}
+
+h1 {
+  color: var(--color);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.organize {
+  color: var(--color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.textarea {
+  height: 200px;
+  width: 80%;
+}
+
+.founder-container {
+  text-align: center;
+  color: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.founder-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 4%;
+}
+
+.right-section h4 {
+  /* margin-left: 20px; */
+  color: #1789ed;
+}
+
+.flex {
+  font-size: medium;
+  font-weight: 100;
+  margin: 0 6vw;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.flex img {
+  margin-left: 6vw;
+  margin-right: 6vw;
+}
+
+.left {
+  text-align: start;
+}
+
+.right {
+  text-align: end;
+}
+.left-section {
+  color: var(--color);
+}
+@media screen and (max-width: 800px) {
+  .founder-container , .flex{
+    margin: 0;
+    text-align: center;
+    color: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+}
